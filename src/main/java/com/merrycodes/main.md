@@ -8,9 +8,12 @@ import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.GraphServiceClient;
 import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
@@ -51,7 +54,7 @@ public class Main {
         User user = graphClient.me().buildRequest().get();
         IMessageCollectionPage iMessageCollectionPage = graphClient.users(user.userPrincipalName).messages().buildRequest().select("sender,subject").get();
         List<Message> messageList = iMessageCollectionPage.getCurrentPage();
-        LOGGER.info("运行时间：{} —— 共有{}封件邮件",  LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")), messageList.size());
+        LOGGER.info("运行时间：{} —— 共有{}封件邮件", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")), messageList.size());
     }
 
 }

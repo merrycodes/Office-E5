@@ -64,6 +64,4 @@
 
 [yml文件配置](https://github.com/moreant/auto-checkin-biliob)
 
-[Microsoft Graph SKDK 邮件API](https://docs.microsoft.com/zh-cn/graph/api/message-list-attachments?view=graph-rest-1.0&tabs=http)
-
-
+[Microsoft Graph SKDK 邮件API](https://docs.microsoft.com/zh-cn/graph/api/user-list-messages?view=graph-rest-1.0&tabs=http)

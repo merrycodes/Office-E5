@@ -1,0 +1,47 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Office E5
+
+on:
+  schedule:
+    - cron: '0 0/6 15 1/2 ?'
+  release:
+    types: [published]
+  watch:
+    types: [started]
+
+jobs: 
+  Call-APi:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id # 自己star启动
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Run jar
+      env:
+        CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        TENANT_GUID: ${{ secrets.TENANT_GUID }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+      run: |
+        java -jar ./officeE5-1.0-SNAPSHOT-jar-with-dependencies.jar "$CLIENT_ID" "$USERNAME" "$PASSWORD" "$TENANT_GUID" "$CLIENT_SECRET"  >> ./run.log
+        tail run.log   
+    - name: Commit log
+      env:
+        NAME: merrycodes
+        EMAIL: merrycodes@163.com
+      run: |
+        git config --global user.email "$NAME"
+        git config --global user.name "$EMAIL"
+        git add .
+        git commit -m "update log" -a
+    - name: Push log
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.TOKEN }}
+        branch: main
