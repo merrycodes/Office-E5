@@ -37,7 +37,7 @@ jobs:
         tail run.log   
     - name: Commit log
       env:
-        NAME: GeorgeDong32
+        NAME: George·Dong
         EMAIL: georgedong32@foxmail.com
       run: |
         git config --global user.name "$NAME"
