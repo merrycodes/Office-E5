@@ -5,6 +5,7 @@
 ##### 已经加入了Microsoft 365 开发人员计划 [链接](https://developer.microsoft.com/zh-cn/microsoft-365/dev-program)
 
 ## 使用：
+> 由于需要储存密码，如果担心默认管理员账号安全性可以新建一个专用于设置自动续期的账户（小号）。这个小号需要先设置为全局管理员以方便操作，知道完成所有(#注册新应用)
 
 1. ##### 登录到Microsoft  Azure [链接](https://portal.azure.com/)
 
