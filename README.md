@@ -40,7 +40,8 @@
 | PASSWORD      | 登录Microsoft Azure的密码                            |      |
 | TOKEN         | GitHub Token                                         |      |
 
-> **其中的 `TOKEN` 获取在GitHub `Setting` -> `Developer settings`  -> `Personal access tokens` 中获取，用于跟新日志**
+> **其中的 `TOKEN` 获取在GitHub `Setting` -> `Developer settings`  -> `Personal access tokens` 中获取，用于更新日志**<br>
+> **或者[点击这里](https://github.com/settings/tokens/new)新建一个 Personal access token，命名随意**
 
 ![image-20201220190941252](md_img/image-20201220190941252.png)
 
@@ -50,7 +51,7 @@
 
 ![image-20201220184333113](md_img/image-20201220184333113.png)
 
-4. ##### 修改 `.github/workflows`中的`main.yml`，修改成自己的用户名和邮箱
+4. ##### 修改 [`.github/workflows`](/.github/workflows)中的`main.yml`，修改成自己的用户名和邮箱
 
 ![image-20210124211449573](md_img/image-20210124211449573.png)
 
