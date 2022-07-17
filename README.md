@@ -5,6 +5,11 @@
 ##### 已经加入了Microsoft 365 开发人员计划 [链接](https://developer.microsoft.com/zh-cn/microsoft-365/dev-program)
 
 ## 使用：
+> 由于需要储存密码，如果担心默认管理员账号安全性可以新建一个专用于设置自动续期的账户（小号）。
+> 
+> 这个小号需要先设置为全局管理员以方便操作，直到完成所有第2部分的步骤。
+> 
+> 完成所有步骤并且测试运行后可以在E5-Office控制面板取消该账号全局管理员，自动续订依然能正常运行
 
 1. ##### 登录到Microsoft  Azure [链接](https://portal.azure.com/)
 
@@ -40,7 +45,8 @@
 | PASSWORD      | 登录Microsoft Azure的密码                            |      |
 | TOKEN         | GitHub Token                                         |      |
 
-> **其中的 `TOKEN` 获取在GitHub `Setting` -> `Developer settings`  -> `Personal access tokens` 中获取，用于跟新日志**
+> **其中的 `TOKEN` 获取在GitHub `Setting` -> `Developer settings`  -> `Personal access tokens` 中获取，用于更新日志**<br>
+> **或者[点击这里](https://github.com/settings/tokens/new)新建一个 Personal access token，命名随意**
 
 ![image-20201220190941252](md_img/image-20201220190941252.png)
 
@@ -50,7 +56,7 @@
 
 ![image-20201220184333113](md_img/image-20201220184333113.png)
 
-4. ##### 修改 `.github/workflows`中的`main.yml`，修改成自己的用户名和邮箱
+4. ##### 修改 [`.github/workflows`](/.github/workflows)中的`main.yml`，修改成自己的用户名和邮箱
 
 ![image-20210124211449573](md_img/image-20210124211449573.png)
 
