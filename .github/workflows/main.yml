@@ -10,6 +10,7 @@ on:
     types: [published]
   watch:
     types: [started]
+  workflow_dispatch:
 
 jobs: 
   Call-APi:
