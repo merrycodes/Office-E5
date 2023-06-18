@@ -56,6 +56,8 @@
 
 ![image-20201220184333113](md_img/image-20201220184333113.png)
 
+> **在`setting`-`Actions`-`General`里`Workflow permissions`选择“Read and write permissions”权限，否则push log会失败**
+
 4. ##### 修改 [`.github/workflows`](/.github/workflows)中的`main.yml`，修改成自己的用户名和邮箱
 
 ![image-20210124211449573](md_img/image-20210124211449573.png)
