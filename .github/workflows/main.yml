@@ -14,7 +14,7 @@ on:
 jobs: 
   Call-APi:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule' # 自己star启动或者schedule触发
+    if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'star' # 自己star启动或者schedule触发
     steps:
     - name: Setup timezone
       uses: zcong1993/setup-timezone@v1.1.1
